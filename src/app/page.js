@@ -1,10 +1,10 @@
 "use client";
 import Stepper from "@/components/Stepper";
 import StepperControl from "@/components/StepperControl";
-import Account from "@/components/steps/Account";
-import Detail from "@/components/steps/Account";
-import Final from "@/components/steps/Account";
-import Payment from "@/components/steps/Account";
+import DatabaseType from "@/components/steps/DatabaseType";
+import Finish from "@/components/steps/Finish";
+import SetupConnection from "@/components/steps/SetupConnection";
+import SetupProject from "@/components/steps/SetupProject";
 import { StepperContext } from "@/contexts/StepperContext";
 import { useState } from "react";
 
@@ -13,21 +13,21 @@ export default function Home() {
   const [userData, setUserData] = useState("");
   const [finalData, setFinalData] = useState([]);
   const steps = [
-    "Account Information",
-    "Personal Details",
-    "Payment",
-    "Complete",
+    "Setup Project",
+    "Select Database type",
+    "setup connection",
+    "finished",
   ];
   const displayStep = (step) => {
     switch (step) {
       case 1:
-        return <Account />;
+        return <SetupProject />;
       case 2:
-        return <Detail />;
+        return <DatabaseType />;
       case 3:
-        return <Payment />;
+        return <SetupConnection />;
       case 4:
-        return <Final />;
+        return <Finish />;
       default:
     }
   };

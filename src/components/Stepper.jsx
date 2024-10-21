@@ -4,8 +4,9 @@ const Stepper = ({ steps, currentStep }) => {
     const [newStep, setNewStep] = useState([]);
     const stepRef = useRef();
     const updateStep = (stepNumber, steps) => {
+        console.log(stepNumber)
         const newSteps = [...steps]
-        let count = 1;
+        let count = 0;
         while (count < newSteps.length) {
             //current step
             if (count === stepNumber) {
@@ -62,13 +63,9 @@ const Stepper = ({ steps, currentStep }) => {
                     <div className={`rounded-full transition duration-500 ease-in-out border-2 border-gray-300 w-12 h-12 flex items-center justify-center
                 py-3 ${step.selected ? "bg-green-600 text-white font-bold border border-green-600" : ""}`}>
                         {/* Display number */}
-                        {step.completed ? (
-                            <span className='text-white font-bold text-xl'>&#10003;</span>
-                        ) : (
-                            idx + 1
-                        )}
+                        {idx + 1}
                     </div>
-                    <div className={`absolute top-0 text-center mt-16 w-32 text-xs font-medium uppercase ${step.highlighted ? "text-gray-900" : "text-gray-400"}`}>
+                    <div className={`absolute top-0 text-center mt-16 w-32 text-xs font-medium capitalize ${step.highlighted ? "text-gray-900" : "text-gray-900"}`}>
                         {/* Display description */}
                         {step.description}
                     </div>
