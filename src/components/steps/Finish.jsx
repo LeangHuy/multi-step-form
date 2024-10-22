@@ -12,8 +12,8 @@ export default function Finish() {
       <div className="w-full h-auto flex gap-4 ">
         <div className="w-full border-2 border-slate-400 rounded-lg">
           <div className='w-full flex p-4 px-8 gap-8 items-center'>
-            <div className="bg-blue-800 rounded-md w-24 h-24 flex items-center justify-center">
-              <Image src="/icons/database.svg" alt="alt" width={1000} height={1000} className='w-16 h-16' />
+            <div className="bg-blue-800 rounded-md w-20 h-20 flex items-center justify-center">
+              <Image src="/icons/database.svg" alt="alt" width={1000} height={1000} className='w-14 h-14' />
             </div>
             <div className="">
               <h1 className='capitalize font-bold text-2xl'>diffDB development</h1>
@@ -48,8 +48,8 @@ export default function Finish() {
         </div>
         <div className="w-full border-2 border-slate-400 rounded-lg">
           <div className='w-full flex p-4 px-8 gap-8 items-center'>
-            <div className="bg-blue-800 rounded-md w-24 h-24 flex items-center justify-center">
-              <Image src="/icons/database.svg" alt="alt" width={1000} height={1000} className='w-16 h-16' />
+            <div className="bg-blue-800 rounded-md w-20 h-20 flex items-center justify-center">
+              <Image src="/icons/database.svg" alt="alt" width={1000} height={1000} className='w-14 h-14' />
             </div>
             <div className="">
               <h1 className='capitalize font-bold text-2xl'>diffDB production</h1>
